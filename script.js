@@ -69,8 +69,12 @@ function validateConfirmPassword() {
 
 function validatePhone() {
     const phone = document.querySelector('#phone');
-    const re = /^\+\d{1,3}\d{9,}$/;
-    if (re.test(phone.value)) {
+    const iti = window.intlTelInputGlobals.getInstance(phone);
+    const phoneNumber = iti.getNumber();
+
+    console.log(phoneNumber);
+    phone.value = phoneNumber
+    if (iti.isValidNumber()) {
         phone.classList.remove('is-invalid');
         phone.classList.add('is-valid');
         return true;
@@ -153,3 +157,18 @@ document.querySelector('#togglePassword').addEventListener('click', function () 
     confirmPasswordField.setAttribute('type', type);
     this.textContent = type === 'password' ? '👁️' : '🙈';
 });
+
+
+window.intlTelInput(document.querySelector("#phone"), {
+    initialCountry: "in",
+    geoIpLookup: function(callback) {
+        fetch("https://ipinfo.io") // Replace with your token
+            .then((resp) => resp.json())
+            .then((resp) => {
+                const countryCode = (resp && resp.country) ? resp.country : "us"; // Default to "us"
+                callback(countryCode);
+            });
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+  });
+  

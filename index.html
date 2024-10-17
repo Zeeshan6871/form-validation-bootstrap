@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <div class="row">
+    <div>
       <div id="form" class="col-8 col-md-6 mx-auto">
         <h3 id="form__head" class="mb-4 text-center">Form Validation</h3>
         <form id="newform" action="#" class="needs-validation" novalidate>
@@ -117,7 +117,7 @@
             </div>
           </div>
 
-          <div class="form-group p-1">
+          <div class="form-group p-1 d-flex flex-column ">
             <label for="phone">Phone No. (with country code)</label>
             <input
               type="tel"
@@ -130,7 +130,6 @@
               Please enter a valid phone number.
             </div>
           </div>
-
           <h5>Address</h5>
           <div class="form-group p-1">
             <label for="street">Street Address</label>
@@ -217,6 +216,10 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+
     <script src="script.js"></script>
   </body>
 </html>

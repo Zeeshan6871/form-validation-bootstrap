@@ -1,0 +1,19 @@
+body {
+    background: #642B73;
+    background: -webkit-linear-gradient(to right, #C6426E, #642B73);
+    background: linear-gradient(to right, #C6426E, #642B73);
+}
+
+#form {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 5%;
+}
+
+.password-toggle {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 40px;
+}

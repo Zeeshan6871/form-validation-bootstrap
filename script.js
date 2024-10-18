@@ -162,10 +162,10 @@ document.querySelector('#togglePassword').addEventListener('click', function () 
 window.intlTelInput(document.querySelector("#phone"), {
     initialCountry: "in",
     geoIpLookup: function(callback) {
-        fetch("https://ipinfo.io") // Replace with your token
+        fetch("https://ipinfo.io") 
             .then((resp) => resp.json())
             .then((resp) => {
-                const countryCode = (resp && resp.country) ? resp.country : "us"; // Default to "us"
+                const countryCode = (resp && resp.country) ? resp.country : "us";
                 callback(countryCode);
             });
     },

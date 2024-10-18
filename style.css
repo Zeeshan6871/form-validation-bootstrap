@@ -4,13 +4,6 @@ body {
     background: linear-gradient(to right, #C6426E, #642B73);
 }
 
-#form {
-    background-color: white;
-    border-radius: 5px;
-    padding: 20px;
-    margin-top: 5%;
-}
-
 .password-toggle {
     cursor: pointer;
     position: absolute;
